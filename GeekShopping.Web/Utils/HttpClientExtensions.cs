@@ -31,6 +31,7 @@ namespace GeekShopping.Web.Utils
             var dataAsString = JsonSerializer.Serialize(data);
             var content = new StringContent(dataAsString);
             content.Headers.ContentType = contentType;
+
             return httpClient.PutAsync(url, content);
         }
     }
