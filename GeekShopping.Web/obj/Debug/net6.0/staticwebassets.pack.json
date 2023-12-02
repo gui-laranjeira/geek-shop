@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\workspace\\Repositórios\\geek-shop\\GeekShopping.Web\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "E:\\workspace\\Repositórios\\geek-shop\\GeekShopping.Web\\wwwroot\\img\\geek_shopping.png",
+      "PackagePath": "staticwebassets\\img\\geek_shopping.png"
+    },
+    {
+      "Id": "E:\\workspace\\Repositórios\\geek-shop\\GeekShopping.Web\\wwwroot\\img\\order.png",
+      "PackagePath": "staticwebassets\\img\\order.png"
+    },
+    {
       "Id": "E:\\workspace\\Repositórios\\geek-shop\\GeekShopping.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
