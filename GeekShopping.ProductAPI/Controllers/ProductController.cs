@@ -1,5 +1,7 @@
-﻿using GeekShopping.ProductAPI.Data.ValueObjects;
+﻿using GeekShopping.ProductAPI.Utils;
+using GeekShopping.ProductAPI.Data.ValueObjects;
 using GeekShopping.ProductAPI.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -18,6 +20,7 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         [Produces("application/json")]
         [SwaggerOperation(Summary = "Get all products")]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<ProductVO>))]
@@ -30,6 +33,7 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         [Produces("application/json")]
         [SwaggerOperation(Summary = "Get product by ID")]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(ProductVO))]
@@ -46,6 +50,7 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [Produces("application/json")]
         [Consumes("application/json")]
         [SwaggerOperation(Summary = "Create new product")]
@@ -63,6 +68,7 @@ namespace GeekShopping.ProductAPI.Controllers
 
         //TODO Get product id by uri and not body
         [HttpPut]
+        [Authorize]
         [Produces("application/json")]
         [Consumes("application/json")]
         [SwaggerOperation(Summary = "Update product")]
@@ -79,6 +85,7 @@ namespace GeekShopping.ProductAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = Role.Admin)]
         [Produces("application/json")]
         [SwaggerOperation(Summary = "Delete product")]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(bool))]
