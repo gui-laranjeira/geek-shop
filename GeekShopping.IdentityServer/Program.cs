@@ -32,6 +32,7 @@ namespace GeekShopping.IdentityServer
                 options.Events.RaiseFailureEvents = true;
                 options.EmitStaticAudienceClaim = true;
             }).AddInMemoryIdentityResources(IdentityConfiguration.IdentityResources)
+              .AddInMemoryApiScopes(IdentityConfiguration.ApiScopes)
               .AddInMemoryClients(IdentityConfiguration.Clients)
               .AddAspNetIdentity<ApplicationUser>();
 
