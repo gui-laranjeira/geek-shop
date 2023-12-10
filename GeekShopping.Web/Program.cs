@@ -20,7 +20,7 @@ namespace GeekShopping.Web
 
             builder.Services.AddAuthentication(options =>
             {
-                options.DefaultScheme = "Cookie";
+                options.DefaultScheme = "Cookies";
                 options.DefaultChallengeScheme = "oidc";
             })
               .AddCookie("Cookies", c => c.ExpireTimeSpan = TimeSpan.FromMinutes(10))
@@ -35,7 +35,7 @@ namespace GeekShopping.Web
                   options.ClaimActions.MapJsonKey("sub", "sub", "sub");
                   options.TokenValidationParameters.NameClaimType = "name";
                   options.TokenValidationParameters.RoleClaimType = "role";
-                  options.Scope.Add("geek_shooping");
+                  options.Scope.Add("geek_shopping");
                   options.SaveTokens = true;
               });
 
